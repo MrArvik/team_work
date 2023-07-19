@@ -92,6 +92,8 @@ class TutorSearchApp(QWidget):
         
         self.search_button = QPushButton('Показати репетиторів')
         self.search_button.setFont(QFont('Arial', 12))  # Уменьшаем размер шрифта кнопки на 2 пункта
+        self.search_button.clicked.connect(self.show_tutors)
+
         
         language_layout.addWidget(language_label)
         language_layout.addWidget(self.language_combo)
