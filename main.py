@@ -85,15 +85,14 @@ class TutorSearchApp(QWidget):
         self.language_combo.addItems(['Мови', 'Математика', 'Фізика'])
         
         self.search_button = QPushButton('Показати репетиторів')
-        self.search_button.setFont(QFont('Arial', 14))
-        self.search_button.clicked.connect(self.show_tutors)
+        self.search_button.setFont(QFont('Arial', 12))  # Уменьшаем размер шрифта кнопки на 2 пункта
         
         language_layout.addWidget(language_label)
         language_layout.addWidget(self.language_combo)
         language_layout.addWidget(self.search_button)
         
         self.tutor_list = QListWidget()
-        self.tutor_list.setStyleSheet("QListWidget { font-size: 16px; }")
+        self.tutor_list.setStyleSheet("QListWidget { font-size: 14px; }")  # Уменьшаем размер шрифта списка на 2 пункта
         
         main_layout.addWidget(title_label)
         main_layout.addLayout(language_layout)
@@ -136,4 +135,3 @@ if __name__ == '__main__':
     
     window = TutorSearchApp()
     window.show()
-    sys.exit(app.exec_())
